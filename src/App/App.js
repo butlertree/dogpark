@@ -6,6 +6,7 @@ import Dogs from '../Dogs/Dogs';
 import DogDetails from '../DogDetails/DogDetails';
 import NotFound from '../NotFound/NotFound';
 import dummydata from '../data/data';
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -51,7 +52,10 @@ function App() {
   useEffect(() => {
     fetch('https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ')
       .then(response => response.json())
-      .then(data => setDogs(data))
+      .then(data => {
+      const dogsWithFavorites = data.map(dog => ({ ...dog, isFavorite: false, newID: uuidv4() }));
+      setDogs(dogsWithFavorites);
+      })
       .catch(error => setError(error.message))
   }, []);
 
@@ -69,6 +73,10 @@ function App() {
           path="/"
           element={<Dogs dogs={dogs}/>}
         />
+        <Route
+            path="/dog/:id" 
+            element={<DogDetails dogs={dogs}/>}
+          />
         <Route
           path="*"
           element={<NotFound />}

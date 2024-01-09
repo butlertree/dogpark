@@ -10,7 +10,8 @@ function Dogs({ dogs }) {
     <div className='dogs-container'>
       {filteredDogs.map((dog) => (
         <DogImageCard
-          key={dog.id} // key
+          key={dog.newID} // key
+          id={dog.newID}
           dogcard={dog} 
         />
       ))}
