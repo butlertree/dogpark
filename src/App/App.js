@@ -46,14 +46,14 @@ function App() {
 
 
   const [error, setError] = useState('')
-  const [dogs, setDogs] = useState(dummydata);
+  const [dogs, setDogs] = useState([]);
 
-  // useEffect(() => {
-  //   fetch('https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ')
-  //     .then(response => response.json())
-  //     .then(data => setDogs(data))
-  //     .catch(error => setError(error.message))
-  // }, []);
+  useEffect(() => {
+    fetch('https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ')
+      .then(response => response.json())
+      .then(data => setDogs(data))
+      .catch(error => setError(error.message))
+  }, []);
 
 
 
