@@ -1,3 +1,14 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import './DogDetails.css'; 
+// import React from 'react';
+// // import { useParams } from 'react-router-dom';
+// // import './DogDetails.css'; 
+
+
+
+
+// function DogDetails({}){
+
+
+
+// }
+
+// export default DogDetails
