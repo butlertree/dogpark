@@ -48,6 +48,7 @@ function App() {
 
   const [error, setError] = useState('')
   const [dogs, setDogs] = useState([]);
+  const [showFavorites, setShowFavorites] = useState(false)
 
   useEffect(() => {
     fetch('https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ')
@@ -60,22 +61,50 @@ function App() {
   }, []);
 
 
+  
+//Add to a favorite list
+
+function toggleFavorite(newID) {
+  //Find the dog with the given id and toggle its favorite status
+
+  const updatedDogs = dogs.map(dog => {
+    if (dog.newID === newID) {
+      return {
+        ...dog,
+        isFavorite: !dog.isFavorite // toggle back and forth the true/false value
+      }
+    }
+    return dog
+  })
+      setDogs(updatedDogs) //Changing the favorite state of dogs in the dogs array
+}
+
+
+
+// A separate list for favorite dogs, used for the /favorites route
+const favoriteDogs = dogs.filter(dog => dog.isFavorite);
+
 
   
   return (
     <main className='App'>
       <header className='app-header'>
           <h1 className='big-heading'>Digital Dog Park</h1>
+          <div className="buttons-container">
+              <Link to="/favorites">View Favorites</Link> 
+              <Link to="/">Back to Main</Link> 
+          </div>
       </header>
       <section className='main-content'>
       <Routes>
         <Route
           path="/"
-          element={<Dogs dogs={dogs}/>}
+          element={<Dogs dogs={dogs} toggleFavorite={toggleFavorite}/>}
         />
+        <Route path="/favorites" element={<Dogs dogs={favoriteDogs} toggleFavorite={toggleFavorite}/>} />
         <Route
             path="/dog/:id" 
-            element={<DogDetails dogs={dogs}/>}
+            element={<DogDetails dogs={dogs} toggleFavorite={toggleFavorite}/>}
           />
         <Route
           path="*"
