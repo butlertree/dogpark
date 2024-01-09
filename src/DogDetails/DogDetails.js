@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-function DogDetails({ dogs }) {
+function DogDetails({ dogs, toggleFavorite }) {
   const { id } = useParams();
 
   // Find the dog with the matching ID
@@ -19,7 +19,10 @@ function DogDetails({ dogs }) {
 
   return (
     <article className="dog-card">
-      <div className='details-wrap'>
+        <button className="like-button" onClick={() => toggleFavorite(dog.newID)}>
+                {dog.isFavorite ? "❤️" : "🤍"}
+        </button>
+        <div className='details-wrap'>
         <section className="left-container">
           <img src={url} alt={`${name} dog`} className="poster" />
         </section>
