@@ -13,7 +13,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
-
+//wont need
   const dummydata = [
     {
     "breeds": [
@@ -48,6 +48,8 @@ function App() {
 
   const [error, setError] = useState('')
   const [dogs, setDogs] = useState([]);
+
+  //may need but will probably go another route
   const [showFavorites, setShowFavorites] = useState(false)
 
   useEffect(() => {
@@ -86,10 +88,16 @@ const favoriteDogs = dogs.filter(dog => dog.isFavorite);
 
 
 
-// // Function to filter dogs by breed group if dog.breeds exists and is not null
-function filterDogsByBreedGroup(breedGroup){
-  return dogs.filter(dog => dog.breeds[0]?.breed_group === breedGroup);
-};
+// Function to filter dogs by breed group if dog.breeds exists and is not null
+function filterDogsByBreedGroup(breedGroup) {
+  const filteredDogs = dogs.filter((dog) => dog.breeds[0]?.breed_group === breedGroup);
+
+  if (filteredDogs.length === 0) {
+    return [{ name: "No breeds found" }]; // no breeds are found
+  }
+
+  return filteredDogs;
+}
   
 
   return (
@@ -98,28 +106,31 @@ function filterDogsByBreedGroup(breedGroup){
           <h1 className='big-heading'>Digital Dog Park</h1>
           <nav className="buttons-breed">
             <Link to="/group/working"><i className="fas fa-paw"></i>Working</Link> 
+            <Link to="/group/herding"><i className="fas fa-paw"></i>Herding</Link> 
+            <Link to="/group/non_sporting"><i className="fas fa-paw"></i>Non-Sporting</Link> 
+            <Link to="/group/toy"><i className="fas fa-paw"></i>Toy</Link> 
+            <Link to="/group/hound"><i className="fas fa-paw"></i>Hound</Link> 
+            <Link to="/group/terrier"><i className="fas fa-paw"></i>Terrier</Link> 
+            <Link to="/group/sporting"><i className="fas fa-paw"></i>Sporting</Link> 
           </nav>
           <div className="buttons-container">
-              <Link to="/favorites">View Favorites</Link> 
-              <Link to="/">Back to Main</Link> 
+            <Link to="/favorites">View Favorites</Link> 
+            <Link to="/">Back to Main</Link> 
           </div>
       </header>
       <section className='main-content'>
       <Routes>
-        <Route
-          path="/"
-          element={<Dogs dogs={dogs} toggleFavorite={toggleFavorite}/>}
-        />
-        <Route path="/favorites" element={<Dogs dogs={favoriteDogs} toggleFavorite={toggleFavorite}/>} />
-        <Route
-            path="/dog/:id" 
-            element={<DogDetails dogs={dogs} toggleFavorite={toggleFavorite}/>}
-          />
-        <Route
-          path="*"
-          element={<NotFound />}
-        />
+        <Route path="/" element={<Dogs dogs={dogs} toggleFavorite={toggleFavorite}/>}/>
+        <Route path="/favorites" element={<Dogs dogs={favoriteDogs} toggleFavorite={toggleFavorite}/>}/>
+        <Route path="/dog/:id" element={<DogDetails dogs={dogs} toggleFavorite={toggleFavorite}/>}/>
+        <Route path="*" element={<NotFound />}/>
         <Route path="/group/working" element={<Dogs dogs={filterDogsByBreedGroup('Working')} toggleFavorite={toggleFavorite} />} />
+        <Route path="/group/sporting" element={<Dogs dogs={filterDogsByBreedGroup('Sporting')} toggleFavorite={toggleFavorite} />} />
+        <Route path="/group/herding" element={<Dogs dogs={filterDogsByBreedGroup('Herding')} toggleFavorite={toggleFavorite} />} />
+        <Route path="/group/non_sporting" element={<Dogs dogs={filterDogsByBreedGroup('Non-Sporting')} toggleFavorite={toggleFavorite} />} />
+        <Route path="/group/toy" element={<Dogs dogs={filterDogsByBreedGroup('Toy')} toggleFavorite={toggleFavorite} />} />
+        <Route path="/group/hound" element={<Dogs dogs={filterDogsByBreedGroup('Hound')} toggleFavorite={toggleFavorite} />} />
+        <Route path="/group/terrier" element={<Dogs dogs={filterDogsByBreedGroup('Terrier')} toggleFavorite={toggleFavorite} />} />
       </Routes>
       </section>
       {error && <h2>Something went wrong, please try again later!</h2>}
