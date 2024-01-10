@@ -85,11 +85,20 @@ function toggleFavorite(newID) {
 const favoriteDogs = dogs.filter(dog => dog.isFavorite);
 
 
+
+// // Function to filter dogs by breed group if dog.breeds exists and is not null
+function filterDogsByBreedGroup(breedGroup){
+  return dogs.filter(dog => dog.breeds[0]?.breed_group === breedGroup);
+};
   
+
   return (
     <main className='App'>
       <header className='app-header'>
           <h1 className='big-heading'>Digital Dog Park</h1>
+          <nav className="buttons-breed">
+            <Link to="/group/working"><i className="fas fa-paw"></i>Working</Link> 
+          </nav>
           <div className="buttons-container">
               <Link to="/favorites">View Favorites</Link> 
               <Link to="/">Back to Main</Link> 
@@ -110,6 +119,7 @@ const favoriteDogs = dogs.filter(dog => dog.isFavorite);
           path="*"
           element={<NotFound />}
         />
+        <Route path="/group/working" element={<Dogs dogs={filterDogsByBreedGroup('Working')} toggleFavorite={toggleFavorite} />} />
       </Routes>
       </section>
       {error && <h2>Something went wrong, please try again later!</h2>}
