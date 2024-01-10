@@ -11,7 +11,7 @@ function Dogs({ dogs, toggleFavorite }) {
       {filteredDogs.map((dog) => (
         <DogImageCard
           key={dog.newID} // key
-          id={dog.newID}
+          id={dog.newID} //unique ID
           dogcard={dog} 
           isFavorite={dog.isFavorite}
           toggleFavorite={() => toggleFavorite(dog.newID)} // Pass the idea ID to toggleFavorit
