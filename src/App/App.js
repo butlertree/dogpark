@@ -5,7 +5,6 @@ import './App.css';
 import Dogs from '../Dogs/Dogs';
 import DogDetails from '../DogDetails/DogDetails';
 import NotFound from '../NotFound/NotFound';
-import dummydata from '../data/data';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -115,7 +114,6 @@ function toggleFavorite(newID) {
 const favoriteDogs = dogs.filter(dog => dog.isFavorite);
 
 
-
 // Function to filter dogs by breed group if dog.breeds exists and is not null
 function filterDogsByBreedGroup(breedGroup) {
   const filteredDogs = dogs.filter((dog) => dog.breeds[0]?.breed_group === breedGroup);
@@ -162,6 +160,9 @@ function filterDogsByBreedGroup(breedGroup) {
       </Routes>
       </section>
       {error && <h2>Something went wrong, please try again later!</h2>}
+      {(favoriteDogs.length === 0 && window.location.pathname === '/favorites') && (
+          <h2>No favorite dogs selected.</h2>
+        )}
       <footer className="app-footer">
         <h2 className='footer-heading'>Digital Dog Park</h2>
         <div className="footer-button-container">
