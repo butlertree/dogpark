@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+  background-color: black; /* background for the entire page */
+  padding-top: 0; 
+}
+
+.main-content {
+  padding-top: 200px; 
+}
+
+.App {
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin: 0; 
+}
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black; 
+  z-index: 100; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  padding: 10px 0; 
+}
+
+.big-heading {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem; 
+  color: #ff6347; 
+  text-shadow: 2px 2px 4px #000000; 
+  margin-bottom: 20px; 
+}
+
+/* Button Styles */
+.button, .dog-tag-button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.button:hover, .dog-tag-button:hover {
+  background-color: #007bff; 
+  color: white; 
+}
+
+/* Specific Dog Tag Button Styles */
+.dog-tag-button {
+  background-color: #D3D3D3; 
+  color: black;
+  border-radius: 25px; 
+  display: inline-flex; 
+  align-items: center;
+  gap: 10px;
+  font-size: 16px; 
+}
+
+.dog-tag-button .fa-dog-leashed {
+  font-size: 1.5rem; 
+}
+
+/* Paw Print Link Styles */
+.buttons-breed a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  background-color: #f2f2f2; 
+  color: black; /* Text color */
+  text-decoration: none;
+  border-radius: 10px; 
+  transition: background-color 0.3s; 
+}
+
+.buttons-breed a .fas {
+  margin-right: 5px; 
+}
+
+.buttons-breed a:hover {
+  background-color: #ddd; 
+  color: #333; 
+}
+
+/* Container Styles */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.buttons-container a {
+  color: white; 
+  text-decoration: none; 
+  position: relative; 
+  font-size: 20px; 
+}
+
+.buttons-container a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  border-bottom: 1px solid white; 
+  transition: left 0.3s ease-in-out, right 0.3s ease-in-out;
+}
+
+.buttons-container a:hover::before {
+  left: 0; 
+  right: 0; 
+}
+
+.app-footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px;
+  background-color: black; 
+}
+
+.footer-heading {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem; 
+  color: #ff6347; 
+  text-shadow: 2px 2px 4px #000000; 
+  margin: 0; 
+}
+
+.footer-button-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; 
+}
+
+.loading-indicator {
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; 
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
