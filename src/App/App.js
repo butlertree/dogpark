@@ -46,8 +46,9 @@ function App() {
 
 
 
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
   const [dogs, setDogs] = useState([]);
+  const [isloading, setIsLoading] = useState(false);
 
   //may need but will probably go another route
   const [showFavorites, setShowFavorites] = useState(false)
@@ -61,6 +62,33 @@ function App() {
       })
       .catch(error => setError(error.message))
   }, []);
+
+
+  // FILTERING DOGS
+  const fetchMoreDogs = () => {
+    setIsLoading(true); // Start loading
+    fetch('https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ')
+      .then(response => response.json())
+      .then(newDogs => {
+        // Filter out dogs that are already in the existing dogs array based on their id
+        const uniqueNewDogs = newDogs.filter(newDog => 
+          !dogs.some(existingDog => existingDog.url === newDog.url)
+        );
+        const dogsWithFavorites = uniqueNewDogs.map(dog => ({
+          ...dog,
+          isFavorite: false,
+          newID: uuidv4() // Generating a unique ID for internal tracking
+        }));
+        
+        setDogs(prevDogs => [...prevDogs, ...dogsWithFavorites]);
+      })
+      .catch(error => {
+      setError(error.message);
+      })
+      .finally(() => {
+      setIsLoading(false); // Stop loading
+      });
+  };
 
 
   
@@ -134,7 +162,14 @@ function filterDogsByBreedGroup(breedGroup) {
       </Routes>
       </section>
       {error && <h2>Something went wrong, please try again later!</h2>}
-   
+      <footer className="app-footer">
+        <h2 className='footer-heading'>Digital Dog Park</h2>
+        <div className="footer-button-container">
+          <button onClick={fetchMoreDogs} className="dog-tag-button">
+            <i className="fa-solid fa-dog-leashed"></i> Fetch More Dogs
+          </button>
+        </div>
+      </footer>
     </main>
   );
 }
