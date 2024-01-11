@@ -42,7 +42,7 @@
   
   .right-container h2, .right-container h3, .right-container p {
     margin: 5px 0;
-    font-size: larger; /* Increase the font size */
+    font-size: larger; 
   }
   
   .like-button {
