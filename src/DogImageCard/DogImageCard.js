@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './DogImageCard.css';
+import PropTypes from 'prop-types';
                                             //i don't need newID because it is passed as a prop (id) from Dogs.js
 function DogImageCard({ dogcard, toggleFavorite, isFavorite, id }) {
   const { url } = dogcard;
@@ -18,6 +19,21 @@ function DogImageCard({ dogcard, toggleFavorite, isFavorite, id }) {
     </div>
   );
 }
+
+DogImageCard.propTypes = {
+    dogcard: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      breeds: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string,
+        })
+      ),
+    }),
+    toggleFavorite: PropTypes.func.isRequired,
+    isFavorite: PropTypes.bool.isRequired,
+    id: PropTypes.string.isRequired,
+  };
+
 
 export default DogImageCard;
 

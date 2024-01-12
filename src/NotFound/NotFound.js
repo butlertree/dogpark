@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -7,11 +7,11 @@
 
 
 
-// function NotFound({}){
+function NotFound({}){
 
 
 
-// }
+}
 
 
-// export default NotFound
+export default NotFound

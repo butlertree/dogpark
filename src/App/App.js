@@ -5,6 +5,7 @@ import Dogs from '../Dogs/Dogs';
 import DogDetails from '../DogDetails/DogDetails';
 import NotFound from '../NotFound/NotFound';
 import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
 
 function App() {
   const dummydata = [
@@ -108,11 +109,8 @@ return dogs.filter(dog => dog.breeds[0]?.breed_group === breedGroup);
 };
 
 
-
-
 // A separate list for favorite dogs, used for the /favorites route
 const favoriteDogs = dogs.filter(dog => dog.isFavorite);
-
 
 
 return (
@@ -180,7 +178,25 @@ return (
     </footer>
   </main>
 );
-          }
+ }
+
+
+
+          Dogs.propTypes = {
+            dogs: PropTypes.array.isRequired,
+            toggleFavorite: PropTypes.func.isRequired,
+          };
+          
+    
+          
+          DogDetails.propTypes = {
+            dogs: PropTypes.array.isRequired,
+            toggleFavorite: PropTypes.func.isRequired,
+          };
+          
+          
+
+
 export default App;
 
 
