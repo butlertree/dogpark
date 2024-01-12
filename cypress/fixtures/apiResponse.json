@@ -1,0 +1,103 @@
+[
+
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "65 - 115",
+                    "metric": "29 - 52"
+                },
+                "height": {
+                    "imperial": "24 - 28",
+                    "metric": "61 - 71"
+                },
+                "id": 6,
+                "name": "Akita",
+                "bred_for": "Hunting bears",
+                "breed_group": "Working",
+                "life_span": "10 - 14 years",
+                "temperament": "Docile, Alert, Responsive, Dignified, Composed, Friendly, Receptive, Faithful, Courageous",
+                "reference_image_id": "BFRYBufpm"
+            }
+        ],
+        "id": "IyR0sT3yy",
+        "url": "https://cdn2.thedogapi.com/images/IyR0sT3yy.jpg",
+        "width": 1936,
+        "height": 1229
+    },
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "23 - 28",
+                    "metric": "10 - 13"
+                },
+                "height": {
+                    "imperial": "15.5 - 20",
+                    "metric": "39 - 51"
+                },
+                "id": 111,
+                "name": "Finnish Spitz",
+                "bred_for": "Hunting birds, small mammals",
+                "breed_group": "Non-Sporting",
+                "life_span": "12 - 15 years",
+                "temperament": "Playful, Loyal, Independent, Intelligent, Happy, Vocal",
+                "reference_image_id": "3PjHlQbkV"
+            }
+        ],
+        "id": "9FHGALKJC",
+        "url": "https://cdn2.thedogapi.com/images/9FHGALKJC.png",
+        "width": 826,
+        "height": 554
+    },
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "130 - 180",
+                    "metric": "59 - 82"
+                },
+                "height": {
+                    "imperial": "25.5 - 27.5",
+                    "metric": "65 - 70"
+                },
+                "id": 212,
+                "name": "Saint Bernard",
+                "bred_for": "Draft, search, rescue",
+                "breed_group": "Working",
+                "life_span": "7 - 10 years",
+                "temperament": "Friendly, Lively, Gentle, Watchful, Calm",
+                "reference_image_id": "_Qf9nfRzL"
+            }
+        ],
+        "id": "Sh2s-ZKMS",
+        "url": "https://cdn2.thedogapi.com/images/Sh2s-ZKMS.jpg",
+        "width": 1080,
+        "height": 690
+    },
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "30 - 50",
+                    "metric": "14 - 23"
+                },
+                "height": {
+                    "imperial": "17.5 - 19.5",
+                    "metric": "44 - 50"
+                },
+                "id": 239,
+                "name": "Standard Schnauzer",
+                "bred_for": "Ratting, guarding",
+                "breed_group": "Working",
+                "life_span": "13 - 15 years",
+                "temperament": "Trainable, Good-natured, Devoted, Lively, Playful, Intelligent",
+                "reference_image_id": "tmzeu6ID_"
+            }
+        ],
+        "id": "Dtxn7vdC0",
+        "url": "https://cdn2.thedogapi.com/images/Dtxn7vdC0.jpg",
+        "width": 680,
+        "height": 1024
+    } 
+]
