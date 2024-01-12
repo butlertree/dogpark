@@ -126,10 +126,10 @@ return (
         <Link to="/group/terrier"><i className="fas fa-paw"></i>Terrier</Link> 
         <Link to="/group/sporting"><i className="fas fa-paw"></i>Sporting</Link> 
       </nav>
-      <div className="buttons-container">
+      <nav className="buttons-container">
         <Link to="/favorites">View Favorites</Link> 
         <Link to="/">Back to Main</Link> 
-      </div>
+      </nav>
     </header>
     <section className='main-content'>
       {isLoading ? (
