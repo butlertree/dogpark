@@ -1,5 +1,5 @@
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Dogs.css'
 import DogImageCard from '../DogImageCard/DogImageCard'
 
@@ -24,9 +24,16 @@ function Dogs({ dogs, toggleFavorite }) {
   }
 
 
-
-
-
-
+  Dogs.propTypes = {
+    dogs: PropTypes.arrayOf(
+      PropTypes.shape({
+        newID: PropTypes.string.isRequired,
+        isFavorite: PropTypes.bool.isRequired,
+      })
+    ).isRequired,
+    toggleFavorite: PropTypes.func.isRequired,
+  };
+  
 
 export default Dogs;
+
