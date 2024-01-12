@@ -1,0 +1,179 @@
+[
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "50 - 60",
+                    "metric": "23 - 27"
+                },
+                "height": {
+                    "imperial": "25 - 27",
+                    "metric": "64 - 69"
+                },
+                "id": 2,
+                "name": "Afghan Hound",
+                "country_code": "AG",
+                "bred_for": "Coursing and hunting",
+                "breed_group": "Hound",
+                "life_span": "10 - 13 years",
+                "temperament": "Aloof, Clownish, Dignified, Independent, Happy",
+                "origin": "Afghanistan, Iran, Pakistan",
+                "reference_image_id": "hMyT4CDXR"
+            }
+        ],
+        "id": "tChrH8dDJ",
+        "url": "https://cdn2.thedogapi.com/images/tChrH8dDJ.jpg",
+        "width": 2400,
+        "height": 2487
+    },
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "45 - 55",
+                    "metric": "20 - 25"
+                },
+                "height": {
+                    "imperial": "20 - 22",
+                    "metric": "51 - 56"
+                },
+                "id": 32,
+                "name": "Bearded Collie",
+                "bred_for": "Sheep herding",
+                "breed_group": "Herding",
+                "life_span": "12 - 14 years",
+                "temperament": "Self-confidence, Hardy, Lively, Alert, Intelligent, Active",
+                "reference_image_id": "A09F4c1qP"
+            }
+        ],
+        "id": "BjFmVohkU",
+        "url": "https://cdn2.thedogapi.com/images/BjFmVohkU.jpg",
+        "width": 1280,
+        "height": 1707
+    },
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "50 - 70",
+                    "metric": "23 - 32"
+                },
+                "height": {
+                    "imperial": "21 - 22",
+                    "metric": "53 - 56"
+                },
+                "id": 61,
+                "name": "Bull Terrier",
+                "bred_for": "Bull baiting, Fighting",
+                "breed_group": "Terrier",
+                "life_span": "10 - 12 years",
+                "temperament": "Trainable, Protective, Sweet-Tempered, Keen, Active",
+                "reference_image_id": "VSraIEQGd"
+            }
+        ],
+        "id": "CLRVGYoXA",
+        "url": "https://cdn2.thedogapi.com/images/CLRVGYoXA.jpg",
+        "width": 1080,
+        "height": 1080
+    },
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "20 - 30",
+                    "metric": "9 - 14"
+                },
+                "height": {
+                    "imperial": "14 - 16",
+                    "metric": "36 - 41"
+                },
+                "id": 145,
+                "name": "Kooikerhondje",
+                "bred_for": "Luring ducks into traps - \"tolling\"",
+                "breed_group": "Sporting",
+                "life_span": "12 - 15 years",
+                "temperament": "Benevolent, Agile, Alert, Intelligent, Active, Territorial",
+                "reference_image_id": "kOMy84GQE"
+            }
+        ],
+        "id": "J4H-oD_7x",
+        "url": "https://cdn2.thedogapi.com/images/J4H-oD_7x.jpg",
+        "width": 533,
+        "height": 800
+    },
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "65 - 115",
+                    "metric": "29 - 52"
+                },
+                "height": {
+                    "imperial": "24 - 28",
+                    "metric": "61 - 71"
+                },
+                "id": 6,
+                "name": "Akita",
+                "bred_for": "Hunting bears",
+                "breed_group": "Working",
+                "life_span": "10 - 14 years",
+                "temperament": "Docile, Alert, Responsive, Dignified, Composed, Friendly, Receptive, Faithful, Courageous",
+                "reference_image_id": "BFRYBufpm"
+            }
+        ],
+        "id": "IyR0sT3yy",
+        "url": "https://cdn2.thedogapi.com/images/IyR0sT3yy.jpg",
+        "width": 1936,
+        "height": 1229
+    },
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "6 - 13",
+                    "metric": "3 - 6"
+                },
+                "height": {
+                    "imperial": "9 - 11.5",
+                    "metric": "23 - 29"
+                },
+                "id": 1,
+                "name": "Affenpinscher",
+                "bred_for": "Small rodent hunting, lapdog",
+                "breed_group": "Toy",
+                "life_span": "10 - 12 years",
+                "temperament": "Stubborn, Curious, Playful, Adventurous, Active, Fun-loving",
+                "origin": "Germany, France",
+                "reference_image_id": "BJa4kxc4X"
+            }
+        ],
+        "id": "BJa4kxc4X",
+        "url": "https://cdn2.thedogapi.com/images/BJa4kxc4X_1280.jpg",
+        "width": 1600,
+        "height": 1199
+    },
+    {
+        "breeds": [
+            {
+                "weight": {
+                    "imperial": "40 - 50",
+                    "metric": "18 - 23"
+                },
+                "height": {
+                    "imperial": "12 - 16",
+                    "metric": "30 - 41"
+                },
+                "id": 63,
+                "name": "Bulldog",
+                "bred_for": "Bull baiting",
+                "breed_group": "Non-Sporting",
+                "life_span": "8 - 10 years",
+                "temperament": "Gregarious, Docile, Willful, Friendly"
+            }
+        ],
+        "id": "HJGzbx9Nm",
+        "url": "https://cdn2.thedogapi.com/images/HJGzbx9Nm_1280.jpg",
+        "width": 700,
+        "height": 700
+    }
+]

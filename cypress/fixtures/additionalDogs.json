@@ -1,0 +1,154 @@
+[
+  {
+      "breeds": [
+          {
+              "weight": {
+                  "imperial": "55 - 90",
+                  "metric": "25 - 41"
+              },
+              "height": {
+                  "imperial": "23 - 27",
+                  "metric": "58 - 69"
+              },
+              "id": 253,
+              "name": "Weimaraner",
+              "bred_for": "Large game trailing and versatile gundog",
+              "breed_group": "Sporting",
+              "life_span": "12 - 15 years",
+              "temperament": "Steady, Aloof, Stubborn, Energetic, Alert, Intelligent, Powerful, Fast",
+              "reference_image_id": "SyU12l9V7"
+          }
+      ],
+      "id": "SyU12l9V7",
+      "url": "https://cdn2.thedogapi.com/images/SyU12l9V7_1280.jpg",
+      "width": 901,
+      "height": 954
+  },
+  {
+      "breeds": [
+          {
+              "weight": {
+                  "imperial": "50 - 60",
+                  "metric": "23 - 27"
+              },
+              "height": {
+                  "imperial": "25 - 27",
+                  "metric": "64 - 69"
+              },
+              "id": 2,
+              "name": "Afghan Hound",
+              "country_code": "AG",
+              "bred_for": "Coursing and hunting",
+              "breed_group": "Hound",
+              "life_span": "10 - 13 years",
+              "temperament": "Aloof, Clownish, Dignified, Independent, Happy",
+              "origin": "Afghanistan, Iran, Pakistan",
+              "reference_image_id": "hMyT4CDXR"
+          }
+      ],
+      "id": "tChrH8dDJ",
+      "url": "https://cdn2.thedogapi.com/images/tChrH8dDJ.jpg",
+      "width": 2400,
+      "height": 2487
+  },
+  {
+      "breeds": [
+          {
+              "weight": {
+                  "imperial": "45 - 55",
+                  "metric": "20 - 25"
+              },
+              "height": {
+                  "imperial": "20 - 22",
+                  "metric": "51 - 56"
+              },
+              "id": 32,
+              "name": "Bearded Collie",
+              "bred_for": "Sheep herding",
+              "breed_group": "Herding",
+              "life_span": "12 - 14 years",
+              "temperament": "Self-confidence, Hardy, Lively, Alert, Intelligent, Active",
+              "reference_image_id": "A09F4c1qP"
+          }
+      ],
+      "id": "BjFmVohkU",
+      "url": "https://cdn2.thedogapi.com/images/BjFmVohkU.jpg",
+      "width": 1280,
+      "height": 1707
+  },
+  {
+      "breeds": [
+          {
+              "weight": {
+                  "imperial": "50 - 70",
+                  "metric": "23 - 32"
+              },
+              "height": {
+                  "imperial": "21 - 22",
+                  "metric": "53 - 56"
+              },
+              "id": 61,
+              "name": "Bull Terrier",
+              "bred_for": "Bull baiting, Fighting",
+              "breed_group": "Terrier",
+              "life_span": "10 - 12 years",
+              "temperament": "Trainable, Protective, Sweet-Tempered, Keen, Active",
+              "reference_image_id": "VSraIEQGd"
+          }
+      ],
+      "id": "CLRVGYoXA",
+      "url": "https://cdn2.thedogapi.com/images/CLRVGYoXA.jpg",
+      "width": 1080,
+      "height": 1080
+  },
+  {
+      "breeds": [
+          {
+              "weight": {
+                  "imperial": "55 - 80",
+                  "metric": "25 - 36"
+              },
+              "height": {
+                  "imperial": "21 - 26",
+                  "metric": "53 - 66"
+              },
+              "id": 76,
+              "name": "Chesapeake Bay Retriever",
+              "bred_for": "Water Retriever",
+              "breed_group": "Sporting",
+              "life_span": "10 - 13 years",
+              "temperament": "Affectionate, Intelligent, Quiet, Dominant, Happy, Protective",
+              "reference_image_id": "9BXwUeCc2"
+          }
+      ],
+      "id": "UuDd-Gb0j",
+      "url": "https://cdn2.thedogapi.com/images/UuDd-Gb0j.jpg",
+      "width": 1080,
+      "height": 1080
+  },
+  {
+      "breeds": [
+          {
+              "weight": {
+                  "imperial": "20 - 30",
+                  "metric": "9 - 14"
+              },
+              "height": {
+                  "imperial": "14 - 16",
+                  "metric": "36 - 41"
+              },
+              "id": 145,
+              "name": "Kooikerhondje",
+              "bred_for": "Luring ducks into traps - \"tolling\"",
+              "breed_group": "Sporting",
+              "life_span": "12 - 15 years",
+              "temperament": "Benevolent, Agile, Alert, Intelligent, Active, Territorial",
+              "reference_image_id": "kOMy84GQE"
+          }
+      ],
+      "id": "J4H-oD_7x",
+      "url": "https://cdn2.thedogapi.com/images/J4H-oD_7x.jpg",
+      "width": 533,
+      "height": 800
+  }
+]
