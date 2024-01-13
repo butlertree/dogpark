@@ -109,7 +109,7 @@ return (
         <h2>Loading...</h2>
       ) : (
         <Routes>
-          <Route path="/" element={<Dogs dogs={dogs} toggleFavorite={toggleFavorite} />} />
+          <Route path="/dogpark" element={<Dogs dogs={dogs} toggleFavorite={toggleFavorite} />} />
           <Route
             path="/favorites"
             element={
