@@ -58,3 +58,18 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   }
   
+  @media (max-width: 480px) {
+   .dog-card {
+    font-size: 15px;
+    max-width: 340px;
+   }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    .dog-card {
+      font-size: 22px;
+      max-width: 690px;
+    }
+  }
+  

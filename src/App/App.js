@@ -103,10 +103,21 @@ const updatedDogs = dogs.map(dog => {
 }
 
 
-// // Function to filter dogs by breed group
-function filterDogsByBreedGroup(breedGroup){
-return dogs.filter(dog => dog.breeds[0]?.breed_group === breedGroup);
-};
+// // // Function to filter dogs by breed group
+// function filterDogsByBreedGroup(breedGroup){
+// return dogs.filter(dog => dog.breeds[0]?.breed_group === breedGroup);
+// };
+
+function filterDogsByBreedGroup(breedGroup, toggleFavorite) {
+  const filteredDogs = dogs ? dogs.filter((dog) => dog.breeds[0]?.breed_group === breedGroup) : [];
+
+  if (filteredDogs.length === 0) {
+    return <h2>No dogs in the {breedGroup} breed group.</h2>;
+  }
+
+  return <Dogs dogs={filteredDogs} toggleFavorite={toggleFavorite} />;
+}
+
 
 
 // A separate list for favorite dogs, used for the /favorites route
@@ -149,14 +160,36 @@ return (
               </>
             }
           />
-          <Route path="/group/working" element={<Dogs dogs={filterDogsByBreedGroup('Working')} toggleFavorite={toggleFavorite} />} />
-          <Route path="/group/sporting" element={<Dogs dogs={filterDogsByBreedGroup('Sporting')} toggleFavorite={toggleFavorite} />} />
-          <Route path="/group/herding" element={<Dogs dogs={filterDogsByBreedGroup('Herding')} toggleFavorite={toggleFavorite} />} />
-          <Route path="/group/non_sporting" element={<Dogs dogs={filterDogsByBreedGroup('Non-Sporting')} toggleFavorite={toggleFavorite} />} />
-          <Route path="/group/toy" element={<Dogs dogs={filterDogsByBreedGroup('Toy')} toggleFavorite={toggleFavorite} />} />
-          <Route path="/group/hound" element={<Dogs dogs={filterDogsByBreedGroup('Hound')} toggleFavorite={toggleFavorite} />} />
-          <Route path="/group/terrier" element={<Dogs dogs={filterDogsByBreedGroup('Terrier')} toggleFavorite={toggleFavorite} />} />
           <Route
+            path="/group/working"
+            element={filterDogsByBreedGroup('Working', toggleFavorite)}
+          />
+          <Route
+            path="/group/sporting"
+            element={filterDogsByBreedGroup('Sporting', toggleFavorite)}
+          />
+          <Route
+            path="/group/herding"
+            element={filterDogsByBreedGroup('Herding', toggleFavorite)}
+          />
+          <Route
+            path="/group/non_sporting"
+            element={filterDogsByBreedGroup('Non-Sporting', toggleFavorite)}
+          />
+          <Route path="/group/toy" element={filterDogsByBreedGroup('Toy', toggleFavorite)} />
+          <Route
+            path="/group/hound"
+            element={filterDogsByBreedGroup('Hound', toggleFavorite)}
+          />
+          <Route
+            path="/group/terrier"
+            element={filterDogsByBreedGroup('Terrier', toggleFavorite)}
+          />
+          <Route
+            path="/dog/:id"
+            element={<DogDetails dogs={dogs} toggleFavorite={toggleFavorite} />}
+          />
+            <Route
             path="/dog/:id" 
             element={<DogDetails dogs={dogs} toggleFavorite={toggleFavorite} />}
           />
@@ -180,27 +213,18 @@ return (
 );
  }
 
-
-
           Dogs.propTypes = {
             dogs: PropTypes.array.isRequired,
             toggleFavorite: PropTypes.func.isRequired,
           };
-          
-    
           
           DogDetails.propTypes = {
             dogs: PropTypes.array.isRequired,
             toggleFavorite: PropTypes.func.isRequired,
           };
           
-          
-
 
 export default App;
-
-
-
 
 
 
