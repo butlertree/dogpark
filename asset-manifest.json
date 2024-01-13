@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dogpark/static/css/main.b303d48f.css",
-    "main.js": "/dogpark/static/js/main.68ab5993.js",
+    "main.js": "/dogpark/static/js/main.027ed272.js",
     "static/js/787.f684d2aa.chunk.js": "/dogpark/static/js/787.f684d2aa.chunk.js",
     "index.html": "/dogpark/index.html",
     "main.b303d48f.css.map": "/dogpark/static/css/main.b303d48f.css.map",
-    "main.68ab5993.js.map": "/dogpark/static/js/main.68ab5993.js.map",
+    "main.027ed272.js.map": "/dogpark/static/js/main.027ed272.js.map",
     "787.f684d2aa.chunk.js.map": "/dogpark/static/js/787.f684d2aa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b303d48f.css",
-    "static/js/main.68ab5993.js"
+    "static/js/main.027ed272.js"
   ]
 }
