@@ -101,7 +101,7 @@ return (
       </nav>
       <nav className="buttons-container">
         <Link to="/favorites">View Favorites</Link> 
-        <Link to="/">Back to Main</Link> 
+        <Link to="/dogpark">Back to Main</Link> 
       </nav>
     </header>
     <section className='main-content'>
