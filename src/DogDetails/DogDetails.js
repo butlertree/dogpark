@@ -15,7 +15,7 @@ function DogDetails({ dogs, toggleFavorite }) {
     const breedDetails = dog.breeds[0] || {}; // Fallback to an empty object if no breed details
     const { name, bred_for, breed_group, life_span, temperament,} = breedDetails
    
-    // Access the imperial weight
+// Access the imperial weight
 const weightImperial = breedDetails.weight ? breedDetails.weight.imperial : "";
 
 // Access the imperial weight

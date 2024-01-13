@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   background-color: black; /* background for the entire page */
   padding-top: 0; 
@@ -147,7 +147,6 @@ body {
   background-color: rgba(0, 0, 0, 0.5); 
 }
 
-
 @media (max-width: 480px) {
   header {
     font-size: 60px;
@@ -161,9 +160,6 @@ body {
     text-align: center; 
   }
 }
-
-
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   header {
