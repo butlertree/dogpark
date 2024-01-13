@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b303d48f.css",
-    "main.js": "/static/js/main.fd52f542.js",
-    "static/js/787.f684d2aa.chunk.js": "/static/js/787.f684d2aa.chunk.js",
-    "index.html": "/index.html",
-    "main.b303d48f.css.map": "/static/css/main.b303d48f.css.map",
-    "main.fd52f542.js.map": "/static/js/main.fd52f542.js.map",
-    "787.f684d2aa.chunk.js.map": "/static/js/787.f684d2aa.chunk.js.map"
+    "main.css": "/dogpark/static/css/main.b303d48f.css",
+    "main.js": "/dogpark/static/js/main.722b4abe.js",
+    "static/js/787.f684d2aa.chunk.js": "/dogpark/static/js/787.f684d2aa.chunk.js",
+    "index.html": "/dogpark/index.html",
+    "main.b303d48f.css.map": "/dogpark/static/css/main.b303d48f.css.map",
+    "main.722b4abe.js.map": "/dogpark/static/js/main.722b4abe.js.map",
+    "787.f684d2aa.chunk.js.map": "/dogpark/static/js/787.f684d2aa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b303d48f.css",
-    "static/js/main.fd52f542.js"
+    "static/js/main.722b4abe.js"
   ]
 }
