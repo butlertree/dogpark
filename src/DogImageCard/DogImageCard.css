@@ -48,8 +48,6 @@
     border-radius: 0 0 15px 15px; 
   }
 
-
-
   @media (max-width: 480px) {
     header {
       font-size: 60px;

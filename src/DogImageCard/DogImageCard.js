@@ -34,6 +34,5 @@ DogImageCard.propTypes = {
     id: PropTypes.string.isRequired,
   };
 
-
 export default DogImageCard;
 

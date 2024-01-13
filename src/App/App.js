@@ -8,40 +8,10 @@ import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 
 function App() {
-  const dummydata = [
-    {
-      "breeds": [
-        {
-          "weight": {
-            "imperial": "6 - 13",
-            "metric": "3 - 6"
-          },
-          "height": {
-            "imperial": "9 - 11.5",
-            "metric": "23 - 29"
-          },
-          "id": 1,
-          "name": "Affenpinscher",
-          "bred_for": "Small rodent hunting, lapdog",
-          "breed_group": "Toy",
-          "life_span": "10 - 12 years",
-          "temperament": "Stubborn, Curious, Playful, Adventurous, Active, Fun-loving",
-          "origin": "Germany, France",
-          "reference_image_id": "BJa4kxc4X"
-        }
-      ],
-      "id": "BJa4kxc4X",
-      "url": "https://cdn2.thedogapi.com/images/BJa4kxc4X_1280.jpg",
-      "width": 1600,
-      "height": 1199
-    },
-  ];
-
+ 
   const [error, setError] = useState('');
   const [dogs, setDogs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
-  const [showFavorites, setShowFavorites] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
@@ -70,7 +40,7 @@ function App() {
       const dogsWithFavorites = uniqueNewDogs.map(dog => ({
         ...dog,
         isFavorite: false,
-        newID: uuidv4() // Generating a unique ID for internal tracking
+        newID: uuidv4() 
       }));
       
       setDogs(prevDogs => [...prevDogs, ...dogsWithFavorites]);
@@ -85,7 +55,6 @@ function App() {
 
 
 
-//Add to a favorite list
 
 function toggleFavorite(newID) {
 //Find the dog with the given id and toggle its favorite status
@@ -94,22 +63,20 @@ const updatedDogs = dogs.map(dog => {
   if (dog.newID === newID) {
     return {
       ...dog,
-      isFavorite: !dog.isFavorite // toggle back and forth the true/false value
+      isFavorite: !dog.isFavorite 
     }
   }
   return dog
 })
-    setDogs(updatedDogs) //Changing the favorite state of dogs in the dogs array
+    setDogs(updatedDogs) 
 }
 
+// A separate list for favorite dogs
+const favoriteDogs = dogs.filter(dog => dog.isFavorite);
 
-// // // Function to filter dogs by breed group
-// function filterDogsByBreedGroup(breedGroup){
-// return dogs.filter(dog => dog.breeds[0]?.breed_group === breedGroup);
-// };
 
 function filterDogsByBreedGroup(breedGroup, toggleFavorite) {
-  const filteredDogs = dogs ? dogs.filter((dog) => dog.breeds[0]?.breed_group === breedGroup) : [];
+const filteredDogs = dogs ? dogs.filter((dog) => dog.breeds[0]?.breed_group === breedGroup) : [];
 
   if (filteredDogs.length === 0) {
     return <h2>No dogs in the {breedGroup} breed group.</h2>;
@@ -117,11 +84,6 @@ function filterDogsByBreedGroup(breedGroup, toggleFavorite) {
 
   return <Dogs dogs={filteredDogs} toggleFavorite={toggleFavorite} />;
 }
-
-
-
-// A separate list for favorite dogs, used for the /favorites route
-const favoriteDogs = dogs.filter(dog => dog.isFavorite);
 
 
 return (
