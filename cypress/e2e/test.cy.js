@@ -5,7 +5,7 @@ describe('On Page Load', () => {
       statusCode: 200,
       fixture: 'apiResponse.json', 
     }).as('apiRequest');
-    cy.visit('localhost:3000');
+    cy.visit('localhost:3000/dogpark');
     cy.wait('@apiRequest');
   });
 
@@ -55,7 +55,7 @@ it('should GET all the dogs on page load', () => {
     cy.intercept('GET', 'https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ', {
       forceNetworkError: true
     }).as('error');
-    cy.visit('localhost:3000');
+    cy.visit('localhost:3000/dogpark');
     cy.wait('@error');
     cy.get('h2').should('contain.text', 'Something went wrong, please try again later!');
   });
@@ -85,7 +85,7 @@ describe('Fetch More Dogs Button', () => {
       fixture: 'apiResponse.json',
     }).as('api1Request');
 
-    cy.visit('localhost:3000');
+    cy.visit('localhost:3000/dogpark');
     cy.wait('@api1Request');
 
     // Initial number of dogs 
@@ -115,7 +115,7 @@ describe('Breed Button Functionality', () => {
       fixture: 'breedTypes.json', 
     }).as('breedTypes');
 
-    cy.visit('localhost:3000');
+    cy.visit('localhost:3000/dogpark');
 
     cy.wait('@breedTypes');
   });
@@ -204,7 +204,7 @@ describe('Selecting dog details', () => {
       statusCode: 200,
       fixture: 'apiResponse.json',
     }).as('apiRequest');
-    cy.visit('localhost:3000');
+    cy.visit('localhost:3000/dogpark');
     cy.wait('@apiRequest');
   });
 
@@ -235,7 +235,7 @@ describe('Selecting dog details', () => {
       statusCode: 200,
       fixture: 'apiResponse.json', 
     }).as('apiRequest');
-    cy.visit('localhost:3000');
+    cy.visit('localhost:3000/dogpark');
     cy.wait('@apiRequest');
   });
 
