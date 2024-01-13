@@ -27,11 +27,10 @@ Digital Dog Park goes the extra mile to ensure a flawless user experience, thoro
 ## 📝  Context
 This project was completed from week 5 of Mod 3 of the Front End development program at Turing School of Software & Design. 
 
-## 🎥 Preview 
-https://github.com/amysiu1028/AeroBites/assets/140124108/9ef9a247-bded-4b60-afbe-6ff200757066
-
 ## Link: 
-[Live Github Link](https://aerobites-app.vercel.app/)
+[Live Github Link](https://butlertree.github.io/dogpark/)
+
+![Screenshot](<src/images/Screenshot 2024-01-13 at 4.20.40 PM.png>)
 
 ## 🔌 Server Setup
 1. Clone the repository: Open a terminal window. Navigate to the directory where you want to clone the repository: `git clone (copied link)`
@@ -52,5 +51,5 @@ https://github.com/amysiu1028/AeroBites/assets/140124108/9ef9a247-bded-4b60-afbe
 ⭐ Successfully navigating a public api and accessing its data for the application.  
 
 ## 🚧 Challenges
-❗ When we were working on sample data with knex.js, the functions were all working but when we implemented a larger data set, we had to completely refactor because a simple dataset with hard coded foreign keys won't run into batching restraints. The larger dataset was loading into multiple terminals and we ended up getting over 630,000 objects. Refactoring and understanding how to rewrite it was a major hurdle. 
+❗ It was more challenging working with a public api that restricted my my requests.  Also, the data was at times incomplete or missing alltogether requiring some filtering and design choices.  
 
