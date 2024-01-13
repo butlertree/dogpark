@@ -3,7 +3,7 @@ describe('On Page Load', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ', {
       statusCode: 200,
-      fixture: 'apiResponse.json', // This fixture should represent the initial state
+      fixture: 'apiResponse.json', 
     }).as('apiRequest');
     cy.visit('localhost:3000');
     cy.wait('@apiRequest');
@@ -31,7 +31,7 @@ it('should GET all the dogs on page load', () => {
     // Check Breed Type Buttons (a anchors elements insde the nav links)
     const breeds = ['Working', 'Herding', 'Non-Sporting', 'Toy', 'Hound', 'Terrier', 'Sporting'];
     breeds.forEach(breed => {
-      cy.get(`nav.buttons-breed a`).contains(breed).should('be.visible');
+    cy.get(`nav.buttons-breed a`).contains(breed).should('be.visible');
     });
 
     // Check View Favorites and Back to Main Links
@@ -43,8 +43,8 @@ it('should GET all the dogs on page load', () => {
 
     // Check Information for each child 
     cy.get('.dogs-container').children().each((element) => {
-      cy.wrap(element).find('img').should('be.visible'); 
-      cy.wrap(element).find('.dog-breed-name').should('be.visible'); 
+    cy.wrap(element).find('img').should('be.visible'); 
+    cy.wrap(element).find('.dog-breed-name').should('be.visible'); 
     });
   });
 
@@ -67,7 +67,7 @@ describe('Error Handling', () => {
   it('should test for 404 network error', () => {
     cy.intercept('GET', 'https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ', {
       statusCode: 200,
-      fixture: 'apiResponse.json', // This fixture should represent the initial state
+      fixture: 'apiResponse.json', 
     }).as('apiRequest');
     cy.visit('localhost:3000/hello');
     cy.wait('@apiRequest');
@@ -106,8 +106,6 @@ describe('Fetch More Dogs Button', () => {
 });
 
 
-
-
 //TEST THE BREED BUTTON FUNCTIONALITY
 describe('Breed Button Functionality', () => {
   beforeEach(() => {
@@ -142,8 +140,6 @@ describe('Breed Button Functionality', () => {
     cy.get('.dogs-container').should('contain', 'Bearded Collie');
   });
 
-
-  
   it('should display only Non-Sporting breed dogs when the Non-Sporting breed button is clicked', () => {
 
     cy.contains('nav.buttons-breed a', 'Non-Sporting').click();
@@ -201,15 +197,12 @@ describe('Breed Button Functionality', () => {
 });
 
 
-
-
-
 //DETAILS OF A DOG
 describe('Selecting dog details', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ', {
       statusCode: 200,
-      fixture: 'apiResponse.json', // This fixture should represent the initial state
+      fixture: 'apiResponse.json',
     }).as('apiRequest');
     cy.visit('localhost:3000');
     cy.wait('@apiRequest');
@@ -240,7 +233,7 @@ describe('Selecting dog details', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ', {
       statusCode: 200,
-      fixture: 'apiResponse.json', // This fixture should represent the initial state
+      fixture: 'apiResponse.json', 
     }).as('apiRequest');
     cy.visit('localhost:3000');
     cy.wait('@apiRequest');
@@ -250,7 +243,6 @@ describe('Selecting dog details', () => {
     // Click on the first dog image
     cy.get('.dog-container').first().find('button').as('firstFavoriteButton').click();
 
-    
      cy.get('@firstFavoriteButton').should('contain', '❤️'); 
      cy.contains('nav.buttons-container a', 'View Favorites').click();
      cy.url().should('include', '/favorites');
@@ -259,6 +251,5 @@ describe('Selecting dog details', () => {
   });
 
 });
-
 })
 
