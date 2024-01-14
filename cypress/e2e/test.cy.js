@@ -154,7 +154,6 @@ describe('Breed Button Functionality', () => {
     
     cy.contains('nav.buttons-breed a', 'Toy').click();
 
-   
     cy.url().should('include', '/group/toy');
 
     cy.get('img[src="https://cdn2.thedogapi.com/images/BJa4kxc4X_1280.jpg"]').should('be.visible');
@@ -175,7 +174,6 @@ describe('Breed Button Functionality', () => {
    
     cy.contains('nav.buttons-breed a', 'Terrier').click();
 
-    
     cy.url().should('include', '/group/terrier');
 
     cy.get('img[src="https://cdn2.thedogapi.com/images/CLRVGYoXA.jpg"]').should('be.visible');
@@ -187,7 +185,6 @@ describe('Breed Button Functionality', () => {
     //CYPRESS KEPT CLICKING THE NON-SPORTING THIS WAS A WORKAROUND THAT I USED
     cy.get('nav.buttons-breed a').eq(6).click(); // Indexing starts at 0
   
-   
     cy.url().should('include', '/group/sporting');
 
     cy.get('img[src="https://cdn2.thedogapi.com/images/J4H-oD_7x.jpg"]').should('be.visible');
@@ -253,3 +250,31 @@ describe('Selecting dog details', () => {
 });
 })
 
+//TEST THE BACK TO MAIN BUTTON
+describe('Main Button Functionality', () => {
+  beforeEach(() => {
+    // Stub the initial API call when the application loads
+    cy.intercept('GET', 'https://api.thedogapi.com/v1/images/search?limit=100&api_key=live_00isfy9kzQCyFWWBludIQFj4g1pDwEoM87PH2PTVx8njhE7q1oEBDzg5lOhHq0QZ', {
+      statusCode: 200,
+      fixture: 'breedTypes.json', 
+    }).as('breedTypes');
+
+    cy.visit('localhost:3000/dogpark');
+
+    cy.wait('@breedTypes');
+  });
+
+  it('should display only working breed dogs when the Working breed button is clicked', () => {
+    
+    cy.contains('nav.buttons-breed a', 'Working').click();
+    cy.url().should('include', '/group/working');
+
+    cy.get('img[src="https://cdn2.thedogapi.com/images/IyR0sT3yy.jpg"]').should('be.visible');
+    cy.get('.dogs-container').should('contain', 'Akita');
+  });
+
+  it('should retun back to the main page when the back to main button is clicked', () => {
+    cy.contains('nav.buttons-container a', 'Back to Main').click()
+    cy.url().should('include', '/dogpark')
+  })
+})
